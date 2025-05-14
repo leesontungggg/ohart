@@ -1,7 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
 import CurrentEvents from "@/components/current-event";
 import UpcomingEvents from "@/components/upcoming-event";
 import BlogPost from "@/components/blog-post";
@@ -24,17 +22,17 @@ export default function SingaporeArtMuseum() {
           <div className="absolute inset-0 bg-black/40 flex items-center">
             <div className="container mx-auto px-4">
               <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
-                Singapore Art Museum
+                OhArt Ồ Ạt
               </h1>
-              <p className="text-xl text-white mb-8">
+              {/* <p className="text-xl text-white mb-8">
                 Contemporary art in Southeast Asia
-              </p>
-              <Button
+              </p> */}
+              {/* <Button
                 size="lg"
                 className="bg-white text-black hover:bg-gray-100"
               >
                 Plan Your Visit <ChevronRight className="ml-2" />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

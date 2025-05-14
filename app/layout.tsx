@@ -29,10 +29,12 @@ const XanhMono = Xanh_Mono({
 
 const oswald = Oswald({
   variable: "--font-oswald",
+  subsets: ["latin"],
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
