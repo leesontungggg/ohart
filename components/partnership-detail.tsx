@@ -13,6 +13,7 @@ export default function PartnershipSection() {
       description:
         "Đây là nhóm 107 tác phẩm của 23 nghệ sĩ được tuyển chọn từ hơn 100 hồ sơ và hàng trăm tác phẩm gửi về Ô Art. Các tác phẩm này được trưng bày tại 3 không gian:",
       locations: ["Amanaki Thảo Điền", "Silart Station", "Đại học HUTECH"],
+      image: "/partnership-1.png",
     },
     {
       id: 1,
@@ -24,6 +25,7 @@ export default function PartnershipSection() {
         "Không gian trưng bày chính",
         "Studio sáng tạo",
       ],
+      image: "/partnership-2.png",
     },
     {
       id: 2,
@@ -35,6 +37,7 @@ export default function PartnershipSection() {
         "Phòng trưng bày nghệ thuật",
         "Không gian sáng tạo sinh viên",
       ],
+      image: "/partnership-3.png",
     },
     // Adding more partners to fill the grid
     {
@@ -42,54 +45,63 @@ export default function PartnershipSection() {
       name: "PARTNER 4",
       description: "Description for Partner 4",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-4.png",
     },
     {
       id: 4,
       name: "PARTNER 5",
       description: "Description for Partner 5",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-5.png",
     },
     {
       id: 5,
       name: "PARTNER 6",
       description: "Description for Partner 6",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-6.png",
     },
     {
       id: 6,
       name: "PARTNER 7",
       description: "Description for Partner 7",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-7.png",
     },
     {
       id: 7,
       name: "PARTNER 8",
       description: "Description for Partner 8",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-8.png",
     },
     {
       id: 8,
       name: "PARTNER 9",
       description: "Description for Partner 9",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-9.png",
     },
     {
       id: 9,
       name: "PARTNER 10",
       description: "Description for Partner 10",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-10.jpg",
     },
     {
       id: 10,
       name: "PARTNER 11",
       description: "Description for Partner 11",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-11.png",
     },
     {
       id: 11,
       name: "PARTNER 12",
       description: "Description for Partner 12",
       locations: ["Location 1", "Location 2"],
+      image: "/partnership-12.png",
     },
   ];
 
@@ -108,16 +120,18 @@ export default function PartnershipSection() {
                 {partners.map((partner, index) => (
                   <div
                     key={partner.id}
-                    className={`bg-gray-300 dark:bg-gray-700 aspect-video flex items-center justify-center cursor-pointer ${
+                    className={`bg-white aspect-video flex items-center justify-center cursor-pointer ${
                       selectedPartner === index
                         ? "border-b-2 border-pink-500"
                         : ""
                     }`}
                     onClick={() => setSelectedPartner(index)}
                   >
-                    <span className="text-sm text-gray-700 dark:text-gray-300">
-                      Logo
-                    </span>
+                    <img
+                      src={partner.image}
+                      alt={partner.name}
+                      className="object-contain h-full aspect-square"
+                    />
                   </div>
                 ))}
               </div>
