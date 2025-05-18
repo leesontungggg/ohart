@@ -11,7 +11,7 @@ export default function Partnership() {
 
   return (
     <section className="container mx-auto px-4 py-16 font-oswald">
-      <h2 className="text-5xl font-light text-pink-500 text-center mb-12 font-xanh">
+      <h2 className="text-5xl font-light text-pink-500 text-left mb-12 font-xanh">
         Partnership
       </h2>
 

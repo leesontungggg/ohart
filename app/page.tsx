@@ -5,6 +5,8 @@ import UpcomingEvents from "@/components/upcoming-event";
 import BlogPost from "@/components/blog-post";
 import Partnership from "@/components/partnership";
 import SubscribeNewsletter from "@/components/subscribe";
+import VideoHomPage from "@/components/video";
+import Gallery from "@/components/gallery";
 
 export default function SingaporeArtMuseum() {
   return (
@@ -44,8 +46,12 @@ export default function SingaporeArtMuseum() {
       {/* Exhibitions Section */}
       <UpcomingEvents />
 
+      <Gallery />
+
       {/* Blog Post Section */}
       <BlogPost />
+
+      <VideoHomPage />
 
       {/* Partnership Section */}
       <Partnership />
