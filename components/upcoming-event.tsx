@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function UpcomingEvents() {
   return (
-    <section className="px-4 py-16 font-oswald md:h-screen min-h-[100vh] bg-[#FF00A8]">
+    <section className="px-4 py-16 font-oswald md:h-auto min-h-screen bg-[#FF00A8]">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start mb-8 h-full">
         <div className="mb-8 md:mb-0 md:w-1/4 h-full flex flex-col">
           <h2 className="text-[100px] font-light text-white leading-tight font-xanh">

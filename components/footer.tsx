@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full bg-black text-white py-12 px-4 font-manrope">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
         <div className="mb-8 md:mb-0">
-          <h2 className="text-6xl font-bold text-pink-500 mb-2">Oh Art</h2>
+          <h2 className="text-6xl font-bold text-white mb-2">Oh Art</h2>
           <p className="text-xs text-gray-400">
             Oh Art © 2023 All rights reserved
           </p>
@@ -97,22 +97,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex space-x-4 mt-8 md:mt-0 md:mt-auto">
+        <div className="flex space-x-4 mt-8 md:mt-0">
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-pink-500 p-2 rounded-full hover:bg-pink-600 transition-colors"
+            className="bg-white p-2 rounded-full transition-colors"
           >
-            <Facebook size={20} />
+            <Facebook size={20} color="black" />
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-pink-500 p-2 rounded-full hover:bg-pink-600 transition-colors"
+            className="bg-white p-2 rounded-full transition-colors"
           >
-            <Instagram size={20} />
+            <Instagram size={20} color="black" />
           </a>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CurrentEvents() {
   return (
-    <section className="container mx-auto px-4 py-16 font-oswald md:h-screen min-h-[100vh]">
+    <section className="container mx-auto px-4 py-16 font-oswald md:h-auto min-h-screen">
       <div className="flex flex-col md:flex-row justify-between items-start mb-8 h-full">
         <div className="mb-8 md:mb-0 md:w-1/4 h-full flex flex-col">
           <h2 className="text-[100px] font-light text-pink-500 leading-tight font-xanh">
