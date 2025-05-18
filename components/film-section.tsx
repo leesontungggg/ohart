@@ -75,7 +75,10 @@ export default function FilmSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {exhibitions.map((exhibition) => (
-            <div key={`film${exhibition.id}`} className="flex flex-col">
+            <div
+              key={`film${exhibition.id}${Math.random()}`}
+              className="flex flex-col"
+            >
               <img
                 src={exhibition.image}
                 alt={exhibition.title}
