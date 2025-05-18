@@ -1,6 +1,7 @@
+import DownloadBooklet from "@/components/download-booklet";
 import Introduction from "@/components/introduction";
 import PartnershipSection from "@/components/partnership-detail";
-import SubscribeNewsletter from "@/components/subscribe";
+// import SubscribeNewsletter from "@/components/subscribe";
 import TeamSection from "@/components/team";
 import React from "react";
 
@@ -20,7 +21,8 @@ export default function About() {
       <Introduction />
       <TeamSection />
       <PartnershipSection />
-      <SubscribeNewsletter />
+      {/* <SubscribeNewsletter /> */}
+      <DownloadBooklet />
     </div>
   );
 }
