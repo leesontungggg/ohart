@@ -42,13 +42,13 @@ export default function Navbar() {
           <SheetContent side="right" className="bg-black border-gray-800">
             <nav className="flex flex-col space-y-6 mt-12">
               <a
-                href="#"
+                href="/about"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 About
               </a>
               <a
-                href="#"
+                href="/programmes"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 Programmes
@@ -101,7 +101,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-2">
           <nav className="flex items-center">
             <a
-              href="#"
+              href="/about"
               className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5"
             >
               About
@@ -109,7 +109,7 @@ export default function Navbar() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <a
-                  href="#"
+                  href="/programmes"
                   className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5 cursor-pointer focus-visible:outline-0"
                   onClick={(e) => e.preventDefault()}
                 >
