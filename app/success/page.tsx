@@ -1,24 +1,65 @@
 import React from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Clock, Calendar, MapPin, FileText } from "lucide-react";
 
 export default function RegistrationSuccess() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <section className="pt-20 bg-[#D1C0F1] w-full">
-        <div className="relative h-[70vh]">
-          <div className="container mx-auto flex flex-col text-white font-xanh md:text-[40px]">
-            PROGRAMMES
-            <br />
-            / FINE ART
-            <br />
-            <span className="text-[#FF00A8] md:text-[80px]">
-              Ký ức của chúng ta
-            </span>
+    <div className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-950">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left side - Event details */}
+        <div>
+          <h1 className="text-4xl font-bold text-pink-500 mb-1 font-xanh">
+            Ký ức của chúng ta
+          </h1>
+          <h2 className="text-3xl font-bold text-pink-500 mb-6 font-xanh">
+            Collective Memories
+          </h2>
+
+          <div className="space-y-4 mb-8">
+            <div className="flex items-center space-x-2">
+              <Clock className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                10 am - 5pm
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <Calendar className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                25/07/2025
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FileText className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                200.000đ
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <MapPin className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                Level 2, Amanaki Thao Dien, Thu Duc, HCMC
+              </p>
+            </div>
           </div>
+
+          <div className="border-t border-gray-200 dark:border-gray-800 my-6"></div>
         </div>
-      </section>
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-white dark:bg-gray-950">
+
+        {/* Right side - Event image */}
+        <div className="flex justify-center items-start">
+          <img
+            src="/event-sample.png"
+            alt="Collective Memories Event"
+            className="w-full max-w-md h-auto object-cover rounded"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center px-4 py-12 bg-white dark:bg-gray-950">
         <div className="w-full max-w-md text-center space-y-6">
           {/* Success icon */}
           <div className="flex justify-center">
