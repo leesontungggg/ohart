@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-
+"use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function FineArtSection() {
+  const router = useRouter();
   const exhibitions = [
     {
       id: 1,
@@ -51,7 +53,11 @@ export default function FineArtSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {exhibitions.map((exhibition) => (
-            <div key={`fineart${exhibition.id}`} className="flex flex-col">
+            <div
+              key={`fineart${exhibition.id}`}
+              className="flex flex-col"
+              onClick={() => router.push(`/programmes/${exhibition.id}`)}
+            >
               <img
                 src={exhibition.image}
                 alt={exhibition.title}

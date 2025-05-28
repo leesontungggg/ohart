@@ -119,29 +119,41 @@ export default function Navbar() {
               <DropdownMenuContent className="bg-[#D8D8D8] text-black min-w-[200px] p-2 rounded-none">
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
                   <a
-                    href="#"
+                    href="/programmes?category=fine-art"
                     className="text-pink-500 hover:underline font-medium w-full"
                   >
                     FINE ART
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a href="#" className="text-black hover:text-pink-500 w-full">
+                  <a
+                    href="/programmes?category=film"
+                    className="text-black hover:text-pink-500 w-full"
+                  >
                     FILM
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a href="#" className="text-black hover:text-pink-500 w-full">
+                  <a
+                    href="/programmes?category=performance"
+                    className="text-black hover:text-pink-500 w-full"
+                  >
                     PERFORMANCE
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a href="#" className="text-black hover:text-pink-500 w-full">
+                  <a
+                    href="/programmes?category=residency"
+                    className="text-black hover:text-pink-500 w-full"
+                  >
                     RESIDENCY
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a href="#" className="text-black hover:text-pink-500 w-full">
+                  <a
+                    href="/programmes?category=workshop"
+                    className="text-black hover:text-pink-500 w-full"
+                  >
                     WORKSHOP & TALKSHOW
                   </a>
                 </DropdownMenuItem>
