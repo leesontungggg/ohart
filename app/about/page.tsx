@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import DownloadBooklet from "@/components/download-booklet";
 import Introduction from "@/components/introduction";
 import PartnershipSection from "@/components/partnership-detail";

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import BlogPost from "@/components/blog-post";
 import FilmSection from "@/components/film-section";
 import FineArtSection from "@/components/fine-art";
