@@ -14,9 +14,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 
 export default function CollectiveMemoriesPage() {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const galleryImages = [
@@ -171,7 +174,10 @@ export default function CollectiveMemoriesPage() {
               </div>
             </div>
 
-            <Button className="w-full bg-pink-500 hover:bg-pink-600 text-white">
+            <Button
+              className="w-full bg-pink-500 hover:bg-pink-600 text-white"
+              onClick={() => router.push("/register")}
+            >
               REGISTER FOR THIS EVENT
             </Button>
           </div>
