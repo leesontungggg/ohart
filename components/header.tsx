@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -41,58 +42,58 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-black border-gray-800">
             <nav className="flex flex-col space-y-6 mt-12">
-              <a
+              <Link
                 href="/about"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/programmes"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 Programmes
-              </a>
+              </Link>
               <div>
-                <a
+                <Link
                   href="#"
                   className="text-white hover:text-pink-500 text-lg uppercase"
                 >
                   Artists & Artworks
-                </a>
+                </Link>
                 <div className="ml-4 mt-2 flex flex-col space-y-2">
-                  <a
+                  <Link
                     href="#"
                     className="text-white hover:text-pink-500 text-base"
                   >
                     Artists
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="text-white hover:text-pink-500 text-base"
                   >
                     Artworks
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <a
+              <Link
                 href="#"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 Blog
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-white hover:text-pink-500 text-lg uppercase"
               >
                 Oh Shop
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="bg-pink-500 hover:bg-pink-600 px-4 py-2 text-white text-sm font-medium uppercase inline-block"
               >
                 Buy Ticket
-              </a>
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>
@@ -100,111 +101,114 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-2">
           <nav className="flex items-center">
-            <a
+            <Link
               href="/about"
               className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5"
             >
               About
-            </a>
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <a
+                <Link
                   href="/programmes"
                   className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5 cursor-pointer focus-visible:outline-0"
                   onClick={(e) => e.preventDefault()}
                 >
                   Programmes
-                </a>
+                </Link>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-[#D8D8D8] text-black min-w-[200px] p-2 rounded-none">
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="/programmes?category=fine-art"
                     className="text-pink-500 hover:underline font-medium w-full"
                   >
                     FINE ART
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="/programmes?category=film"
                     className="text-black hover:text-pink-500 w-full"
                   >
                     FILM
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="/programmes?category=performance"
                     className="text-black hover:text-pink-500 w-full"
                   >
                     PERFORMANCE
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="/programmes?category=residency"
                     className="text-black hover:text-pink-500 w-full"
                   >
                     RESIDENCY
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="/programmes?category=workshop"
                     className="text-black hover:text-pink-500 w-full"
                   >
                     WORKSHOP & TALKSHOW
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <a
+                <Link
                   href="#"
                   className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5 cursor-pointer focus-visible:outline-0"
                   onClick={(e) => e.preventDefault()}
                 >
                   Artists & Artworks
-                </a>
+                </Link>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-[#D8D8D8] text-black min-w-[200px] p-2 rounded-none">
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a
+                  <Link
                     href="#"
                     className="text-pink-500 hover:underline font-medium w-full"
                   >
                     ARTISTS
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="focus:bg-gray-200 focus:text-pink-500">
-                  <a href="#" className="text-black hover:text-pink-500 w-full">
+                  <Link
+                    href="#"
+                    className="text-black hover:text-pink-500 w-full"
+                  >
                     ARTWORKS
-                  </a>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <a
+            <Link
               href="#"
               className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5"
             >
               Blog
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white hover:text-pink-500 text-sm font-medium uppercase px-4 py-5"
             >
               Oh Shop
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="bg-pink-500 hover:bg-pink-600 px-4 py-2 text-white text-xs font-medium uppercase ml-4"
             >
               Buy Ticket
-            </a>
+            </Link>
           </nav>
 
           {/* Search Button/Input */}

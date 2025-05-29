@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import Link from "next/link";
+
 export default function CollectiveMemoriesPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -99,9 +101,9 @@ export default function CollectiveMemoriesPage() {
         <div className="mb-6">
           <button className="flex items-center text-gray-600 dark:text-gray-300 hover:underline">
             <ChevronLeft className="h-4 w-4 mr-1" />
-            <a href="/programmes" className="text-sm">
+            <Link href="/programmes" className="text-sm">
               Back to listings
-            </a>
+            </Link>
           </button>
         </div>
 

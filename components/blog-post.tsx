@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogPost() {
   const blogPosts = [
@@ -32,12 +33,12 @@ export default function BlogPost() {
         <h2 className="text-5xl font-light text-pink-500 font-xanh">
           Blog Post
         </h2>
-        <a
+        <Link
           href="#"
           className="flex items-center text-sm hover:text-pink-500 font-manrope"
         >
           See all <ArrowRight className="ml-1 h-4 w-4" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -49,9 +50,12 @@ export default function BlogPost() {
               {post.content}
             </p>
             <div className="mt-auto flex flex-col">
-              <a href="#" className="text-pink-500 text-sm mb-2 font-manrope">
+              <Link
+                href="#"
+                className="text-pink-500 text-sm mb-2 font-manrope"
+              >
                 Read more &gt;
-              </a>
+              </Link>
               <span className="text-sm text-gray-500 font-manrope">
                 {post.date}
               </span>

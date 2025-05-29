@@ -17,6 +17,7 @@ import { Mail, Phone, User, Ticket } from "lucide-react";
 import { makeid } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Checkbox } from "./ui/checkbox";
+import Link from "next/link";
 
 export default function TicketPurchaseModal({ open = false, setOpen, event }) {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function TicketPurchaseModal({ open = false, setOpen, event }) {
   });
 
   const [acceptPDPA, setAcceptPDPA] = useState(false);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,7 +43,7 @@ export default function TicketPurchaseModal({ open = false, setOpen, event }) {
       return;
     }
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     try {
       const orderData = {
@@ -66,7 +67,7 @@ export default function TicketPurchaseModal({ open = false, setOpen, event }) {
         method: "POST",
         body: JSON.stringify(orderData),
       }).then(() => {
-        setIsLoading(false)
+        setIsLoading(false);
         toast.success("Ticket purchase successful!");
         setOpen(false);
         setFormData({
@@ -78,7 +79,7 @@ export default function TicketPurchaseModal({ open = false, setOpen, event }) {
         router.push("/thank-you");
       });
     } catch (e: any) {
-      setIsLoading(false)
+      setIsLoading(false);
       console.log(e);
     }
   };
@@ -174,9 +175,9 @@ export default function TicketPurchaseModal({ open = false, setOpen, event }) {
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Tôi đã đọc và đồng ý với{" "}
-              <a className="underline" target="_blank" href="/policy">
+              <Link className="underline" target="_blank" href="/policy">
                 điều khoản
-              </a>{" "}
+              </Link>{" "}
               của chương trình
             </label>
           </div>

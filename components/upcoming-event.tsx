@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function UpcomingEvents() {
   return (
@@ -19,9 +19,12 @@ export default function UpcomingEvents() {
 
         <div className="flex flex-col md:flex-row gap-6 md:w-3/4 relative pt-[10%]">
           <div className="absolute right-4 top-0 flex items-center text-sm">
-            <a href="#" className="flex items-center text-white font-manrope">
-              See all <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            <Link
+              href="#"
+              className="flex items-center text-white font-manrope"
+            >
+              See all <a className="ml-2 h-4 w-4" />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
