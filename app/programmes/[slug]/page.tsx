@@ -104,7 +104,7 @@ export default function CollectiveMemoriesPage() {
         <div className="mb-6">
           <button className="flex items-center text-gray-600 dark:text-gray-300 hover:underline">
             <ChevronLeft className="h-4 w-4 mr-1" />
-            <Link href="/programmes" className="text-sm font-manrope text-base">
+            <Link href="/programmes" className="font-manrope text-base">
               Back to listings
             </Link>
           </button>

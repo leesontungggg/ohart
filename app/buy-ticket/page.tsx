@@ -5,6 +5,7 @@ import { Clock, Calendar, DollarSign, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import Image from "next/image";
 
 export default function BuyTicket() {
   const [fullName, setFullName] = useState("");
@@ -61,9 +62,11 @@ export default function BuyTicket() {
               </div>
 
               <div className="md:w-1/3">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=300&h=200&auto=format&fit=crop"
                   alt="Event poster"
+                  width={300}
+                  height={200}
                   className="w-full h-auto rounded-md"
                 />
               </div>
