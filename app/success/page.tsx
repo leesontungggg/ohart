@@ -6,7 +6,7 @@ import { Clock, Calendar, MapPin, FileText } from "lucide-react";
 
 export default function RegistrationSuccess() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-950">
+    <div className="container mx-auto px-4 py-8 bg-white dark:bg-gray-950">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left side - Event details */}
         <div>
@@ -19,29 +19,27 @@ export default function RegistrationSuccess() {
 
           <div className="space-y-4 mb-8">
             <div className="flex items-center space-x-2">
-              <Clock className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-              <p className="text-sm text-gray-700 dark:text-gray-300">
+              <Clock className="h-5 w-5 text-black dark:text-gray-400" />
+              <p className="text-sm text-black dark:text-gray-300">
                 10 am - 5pm
               </p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <Calendar className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-              <p className="text-sm text-gray-700 dark:text-gray-300">
+              <Calendar className="h-5 w-5 text-black dark:text-gray-400" />
+              <p className="text-sm text-black dark:text-gray-300">
                 25/07/2025
               </p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <FileText className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                200.000đ
-              </p>
+              <FileText className="h-5 w-5 text-black dark:text-gray-400" />
+              <p className="text-sm text-black dark:text-gray-300">200.000đ</p>
             </div>
 
             <div className="flex items-center space-x-2">
-              <MapPin className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-              <p className="text-sm text-gray-700 dark:text-gray-300">
+              <MapPin className="h-5 w-5 text-black dark:text-gray-400" />
+              <p className="text-sm text-black dark:text-gray-300">
                 Level 2, Amanaki Thao Dien, Thu Duc, HCMC
               </p>
             </div>
@@ -75,7 +73,7 @@ export default function RegistrationSuccess() {
           </h1>
 
           {/* Description */}
-          <div className="text-sm text-gray-700 dark:text-gray-300 space-y-4">
+          <div className="text-sm text-black dark:text-gray-300 space-y-4">
             <p>Vé và QR code xác nhận đã được gửi đến email của bạn.</p>
 
             <p>

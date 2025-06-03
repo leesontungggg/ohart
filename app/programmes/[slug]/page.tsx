@@ -99,12 +99,12 @@ export default function CollectiveMemoriesPage() {
           </div>
         </div>
       </section>
-      <div className="max-w-3xl mx-auto px-4 py-8 bg-white dark:bg-gray-950">
+      <div className="container mx-auto px-4 py-8 bg-white dark:bg-gray-950">
         {/* Back button */}
         <div className="mb-6">
           <button className="flex items-center text-gray-600 dark:text-gray-300 hover:underline">
             <ChevronLeft className="h-4 w-4 mr-1" />
-            <Link href="/programmes" className="text-sm">
+            <Link href="/programmes" className="text-sm font-manrope text-base">
               Back to listings
             </Link>
           </button>
@@ -123,137 +123,136 @@ export default function CollectiveMemoriesPage() {
         {/* Event details */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="col-span-2">
-            <p className="text-sm mb-4 dark:text-gray-300 font-manrope">
-              Ở Art ta dự án nghệ thuật độc lập, hướng đến tạo nơi trưng bày kết
-              nối giữa nghệ sĩ và nghệ sĩ, nghệ sĩ với khán giả, và nghệ sĩ với
-              không gian và các nhà tổ chức.
-            </p>
-            <p className="text-sm mb-4 dark:text-gray-300">
-              Ở Art 2024 được thực hiện theo nền tảng &quot;pop-up&quot;, với
-              chuỗi những sự kiện, triển lãm, trình diễn, trình chiếu/phim, lưu
-              trữ sáng tác, mở xưởng, thảm khảo giải hài độc thoại, trò chuyện
-              và hội thảo, lần lượt từ ngày 31 tháng 5 đến ngày 09 tháng 6 tại
-              Sài Gòn.
-            </p>
+            <div className="font-manrope text-[24px] font-light">
+              <p className="mb-4 dark:text-gray-300">
+                Ở Art ta dự án nghệ thuật độc lập, hướng đến tạo nơi trưng bày
+                kết nối giữa nghệ sĩ và nghệ sĩ, nghệ sĩ với khán giả, và nghệ
+                sĩ với không gian và các nhà tổ chức.
+              </p>
+              <p className="mb-4 dark:text-gray-300">
+                Ở Art 2024 được thực hiện theo nền tảng &quot;pop-up&quot;, với
+                chuỗi những sự kiện, triển lãm, trình diễn, trình chiếu/phim,
+                lưu trữ sáng tác, mở xưởng, thảm khảo giải hài độc thoại, trò
+                chuyện và hội thảo, lần lượt từ ngày 31 tháng 5 đến ngày 09
+                tháng 6 tại Sài Gòn.
+              </p>
+            </div>
+            {/* Artists */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-4 dark:text-gray-100 font-oswald">
+                Artists
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {artists.map((artist, index) => (
+                  <div
+                    key={index}
+                    className="border border-black dark:border-gray-700 px-3 py-1 text-xs font-manrope"
+                  >
+                    {artist}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-4 dark:text-gray-100 font-oswald">
+                Gallery
+              </h3>
+              <div className="relative">
+                <div className="overflow-hidden">
+                  <img
+                    src={galleryImages[currentSlide]}
+                    alt={`Gallery image ${currentSlide + 1}`}
+                    className="w-full object-cover aspect-square"
+                  />
+                  {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 z-0">
+                    <div className="text-white">
+                      <h4 className="text-xl font-bold">KỶ ỨC CỦA CHÚNG TA</h4>
+                      <p className="text-sm">COLLECTIVE MEMORIES</p>
+                    </div>
+                  </div> */}
+                </div>
+
+                <div className="flex justify-center mt-2 space-x-2 z-50">
+                  {galleryImages.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`h-16 w-16 ${
+                        index === currentSlide
+                          ? "border-2 border-pink-500"
+                          : "opacity-70"
+                      }`}
+                      onClick={() => setCurrentSlide(index)}
+                    >
+                      <img
+                        src={galleryImages[index]}
+                        alt={`Thumbnail ${index + 1}`}
+                        className="h-full w-full object-cover cursor-pointer"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex justify-center mt-2">
+                  <button
+                    onClick={prevSlide}
+                    className="p-1 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
+                  >
+                    <ChevronLeftIcon className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="p-1 rounded-full bg-gray-200 dark:bg-gray-800"
+                  >
+                    <ChevronRightIcon className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-4">
-            <div className="flex items-start space-x-2">
-              <Clock className="h-5 w-5 mt-0.5 text-gray-500 dark:text-gray-400" />
+            <div className="flex items-center space-x-2">
+              <Clock className="h-5 w-5 mt-0.5 text-black dark:text-gray-400" />
               <div className="flex justify-center items-center">
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-black dark:text-gray-400">
                   10 am - 5pm
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-2">
-              <Calendar className="h-5 w-5 mt-0.5 text-gray-500 dark:text-gray-400" />
+            <div className="flex items-center space-x-2">
+              <Calendar className="h-5 w-5 mt-0.5 text-black dark:text-gray-400" />
               <div className="flex justify-center items-center">
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-black dark:text-gray-400">
                   31 May 2025 - 10 Apr 2025
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-2">
-              <MapPin className="h-5 w-5 mt-0.5 text-gray-500 dark:text-gray-400" />
+            <div className="flex items-center space-x-2">
+              <MapPin className="h-5 w-5 mt-0.5 text-black dark:text-gray-400" />
               <div className="flex justify-center items-center">
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-black dark:text-gray-400">
                   Level 2, Emerald Tower, Thu Duc, HCMC
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-2">
-              <FileText className="h-5 w-5 mt-0.5 text-gray-500 dark:text-gray-400" />
+            <div className="flex items-center space-x-2">
+              <FileText className="h-5 w-5 mt-0.5 text-black dark:text-gray-400" />
               <div className="flex justify-center items-center">
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Files
-                </p>
+                <p className="text-xs text-black dark:text-gray-400">Files</p>
               </div>
             </div>
 
             <Button
-              className="w-full bg-pink-500 hover:bg-pink-600 text-white"
+              className="w-full bg-pink-500 hover:bg-pink-600 text-white cursor-pointer"
               onClick={() => router.push("/register")}
             >
               REGISTER FOR THIS EVENT
             </Button>
-          </div>
-        </div>
-
-        {/* Artists */}
-        <div className="mb-8">
-          <h3 className="text-xl font-bold mb-4 dark:text-gray-100 font-oswald">
-            Artists
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {artists.map((artist, index) => (
-              <div
-                key={index}
-                className="border border-gray-300 dark:border-gray-700 px-3 py-1 text-xs"
-              >
-                {artist}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Gallery */}
-        <div className="mb-12">
-          <h3 className="text-xl font-bold mb-4 dark:text-gray-100 font-oswald">
-            Gallery
-          </h3>
-          <div className="relative">
-            <div className="overflow-hidden">
-              <img
-                src={galleryImages[currentSlide]}
-                alt={`Gallery image ${currentSlide + 1}`}
-                className="w-full object-cover aspect-square"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 z-0">
-                <div className="text-white">
-                  <h4 className="text-xl font-bold">KỶ ỨC CỦA CHÚNG TA</h4>
-                  <p className="text-sm">COLLECTIVE MEMORIES</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center mt-2 space-x-2 z-50">
-              {galleryImages.map((_, index) => (
-                <div
-                  key={index}
-                  className={`h-16 w-16 ${
-                    index === currentSlide
-                      ? "border-2 border-pink-500"
-                      : "opacity-70"
-                  }`}
-                  onClick={() => setCurrentSlide(index)}
-                >
-                  <img
-                    src={galleryImages[index]}
-                    alt={`Thumbnail ${index + 1}`}
-                    className="h-full w-full object-cover cursor-pointer"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-center mt-2">
-              <button
-                onClick={prevSlide}
-                className="p-1 rounded-full bg-gray-200 dark:bg-gray-800 mr-2"
-              >
-                <ChevronLeftIcon className="h-4 w-4" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="p-1 rounded-full bg-gray-200 dark:bg-gray-800"
-              >
-                <ChevronRightIcon className="h-4 w-4" />
-              </button>
-            </div>
           </div>
         </div>
 
@@ -265,7 +264,7 @@ export default function CollectiveMemoriesPage() {
             </h3>
             <a
               href="#"
-              className="text-sm flex items-center text-gray-600 dark:text-gray-300 hover:underline"
+              className="text-sm flex items-center text-black dark:text-gray-300 hover:underline font-manrope"
             >
               See all <ArrowRight className="h-4 w-4 ml-1" />
             </a>
@@ -278,13 +277,13 @@ export default function CollectiveMemoriesPage() {
                 className="border-t border-gray-200 dark:border-gray-800 pt-2"
               >
                 <div className="bg-gray-300 dark:bg-gray-700 h-32 mb-2"></div>
-                <h4 className="font-bold text-sm mb-1 dark:text-gray-100">
+                <h4 className="font-bold text-sm mb-1 dark:text-gray-100 font-oswald">
                   {event.title}
                 </h4>
-                <div className="text-pink-500 text-xs font-bold">
+                <div className="text-pink-500 text-xs font-bold font-manrope">
                   {event.type}
                 </div>
-                <div className="text-pink-500 text-xl font-bold">
+                <div className="text-pink-500 text-xl font-bold font-manrope">
                   {event.date}
                 </div>
               </div>
