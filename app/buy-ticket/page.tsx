@@ -63,7 +63,7 @@ export default function BuyTicket() {
 
               <div className="md:w-1/3">
                 <Image
-                  src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=300&h=200&auto=format&fit=crop"
+                  src="/event-sample.png"
                   alt="Event poster"
                   width={300}
                   height={200}
